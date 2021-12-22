@@ -1,0 +1,15 @@
+{
+  "name": "com.albertovosgerau.editorlayoutextensions",
+  "displayName": "Unity Editor Layout",
+  "version": "0.0.3",
+  "unity": "2020.3",
+  "description": "Unity Editor Layout Extensions helps the creation of custom inspectors using cleaner code",
+  "keywords": [
+    "unity"
+  ],
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlbertoVosgerau/UnityMVC-C.git.git#releases/0.0.3"
+  }
+}
