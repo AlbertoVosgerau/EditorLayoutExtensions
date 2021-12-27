@@ -27,6 +27,7 @@ public class EditorLayoutExtensionsExample : EditorWindow
         GUIElements.Row(() =>
         {
             GUIElements.Button("MyButton02", ButtonClicked);
+            
             GUIElements.Column(() =>
                 {
                     GUIElements.Button("MyButton03", ButtonClicked);
@@ -56,7 +57,7 @@ public class EditorLayoutExtensionsExample : EditorWindow
                 GUIElements.Button("MyButton01", ButtonClicked);
             });
         },
-        elementStyle: style
+            elementStyle: style
         );
     }
     

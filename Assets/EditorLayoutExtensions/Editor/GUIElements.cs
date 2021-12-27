@@ -128,5 +128,89 @@ namespace EditorLayoutExtensions.GUIElements
                 content();
             }
         }
+        
+        /// <summary>
+        /// Displays dialog
+        /// </summary>
+        /// <param name="title">Title</param>
+        /// <param name="message">Message explaining what the window does</param>
+        /// <param name="okText">ok text</param>
+        /// <param name="onConfirm">onConfirm called if the user clicks ok button</param>
+        /// <returns>Was ok button selected?</returns>
+        public static bool ConfirmationWindow(string title, string message, string okText, Action onConfirm)
+        {
+            bool isOk = EditorUtility.DisplayDialog(title, message, okText);
+            if (isOk)
+            {
+                onConfirm();
+            }
+            return isOk;
+        }
+        
+        /// <summary>
+        /// Displays dialog
+        /// </summary>
+        /// <param name="title">Title</param>
+        /// <param name="message">Message explaining what the window does</param>
+        /// <param name="okText">ok text</param>
+        /// <param name="onConfirm">onConfirm called if the user clicks ok button</param>
+        /// <param name="onCancel">onConfirm called if the user clicks cancel button</param>
+        /// <returns>Was ok button selected?</returns>
+        public static bool ConfirmationWindow(string title, string message, string okText, Action onConfirm, Action onCancel)
+        {
+            bool isOk = EditorUtility.DisplayDialog(title, message, okText);
+            if (isOk)
+            {
+                onConfirm();
+            }
+            else
+            {
+                onCancel();
+            }
+            return isOk;
+        }
+        
+        /// <summary>
+        /// Displays dialog
+        /// </summary>
+        /// <param name="title">Title</param>
+        /// <param name="message">Message explaining what the window does</param>
+        /// <param name="okText">ok text</param>
+        /// <param name="cancelText">cancel text</param>
+        /// <param name="onConfirm">onConfirm called if the user clicks ok button</param>
+        /// <returns>Was ok button selected?</returns>
+        public static bool ConfirmationWindow(string title, string message, string okText, string cancelText, Action onConfirm)
+        {
+            bool isOk = EditorUtility.DisplayDialog(title, message, okText, cancelText);
+            if (isOk)
+            {
+                onConfirm();
+            }
+            return isOk;
+        }
+        
+        /// <summary>
+        /// Displays dialog
+        /// </summary>
+        /// <param name="title">Title</param>
+        /// <param name="message">Message explaining what the window does</param>
+        /// <param name="okText">ok text</param>
+        /// <param name="cancelText">cancel text</param>
+        /// <param name="onConfirm">onConfirm called if the user clicks ok button</param>
+        /// <param name="onCancel">onConfirm called if the user clicks cancel button</param>
+        /// <returns>Was ok button selected?</returns>
+        public static bool ConfirmationWindow(string title, string message, string okText, string cancelText, Action onConfirm, Action onCancel)
+        {
+            bool isOk = EditorUtility.DisplayDialog(title, message, okText, cancelText);
+            if (isOk)
+            {
+                onConfirm();
+            }
+            else
+            {
+                onCancel();
+            }
+            return isOk;
+        }
     }
 }

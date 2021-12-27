@@ -1,4 +1,4 @@
-namespace EditorLayoutExtensions.GUIElements.Models
+namespace EditorLayoutExtensions.GUIElements.Structs
 {
     public struct Padding
     {
